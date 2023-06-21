@@ -10,9 +10,7 @@ En esta guía, aprenderemos a realizar una ETL (Extracción, Transformación y C
 - En el campo "Redirect URIs", ingresamos la siguiente URL:
   - Redirect URIs: [http://localhost:3000](http://localhost:3000/)
 
-![Interfaz de usuario gráfica, Texto
-
-Descripción generada automáticamente](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.001.png)
+![Interfaz de usuario gráfica, Texto Descripción generada automáticamente](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.001.png)
 ### **3. Obtener las credenciales de la aplicación**
 - Después de crear la aplicación, copiemos el "Client ID" y el "Client secret". Los necesitaremos más adelante.
 
@@ -22,9 +20,7 @@ Descripción generada automáticamente](Aspose.Words.6be16035-2bd3-4526-8fba-30f
 - Ingresamos el "Client ID" y el "Client secret" cuando se solicite.
 - El script de Python nos devolverá el Access Token. Copiemos este valor, ya que lo utilizaremos en los pasos siguientes.
 
-![Texto
-
-Descripción generada automáticamente](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.003.png)
+![Texto Descripción generada automáticamente](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.003.png)
 ### **5. Preparar el comando cURL**
 - Para obtener información de un artista específico en Spotify, utilizaremos el endpoint "search" de la API.
 - Supongamos que queremos obtener información sobre el artista "Maluma". Podemos usar el siguiente comando cURL como ejemplo:
