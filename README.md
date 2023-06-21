@@ -10,17 +10,17 @@ En esta guía, aprenderemos a realizar una ETL (Extracción, Transformación y C
 - En el campo "Redirect URIs", ingresamos la siguiente URL:
   - Redirect URIs: [http://localhost:3000](http://localhost:3000/)
 
-![Interfaz de usuario gráfica, Texto Descripción generada automáticamente](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.001.png)
+![Crear una nueva aplicación](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.001.png)
 ### **3. Obtener las credenciales de la aplicación**
 - Después de crear la aplicación, copiemos el "Client ID" y el "Client secret". Los necesitaremos más adelante.
 
-![](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.002.png)
+![Obtener las credenciales de la aplicación](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.002.png)
 ### **4. Obtener el Access Token mediante Python**
 - Descarguemos el archivo "AccessToken.py" proporcionado y ejecutémoslo.
 - Ingresamos el "Client ID" y el "Client secret" cuando se solicite.
 - El script de Python nos devolverá el Access Token. Copiemos este valor, ya que lo utilizaremos en los pasos siguientes.
 
-![Texto Descripción generada automáticamente](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.003.png)
+![Obtener el Access Token mediante Python](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.003.png)
 ### **5. Preparar el comando cURL**
 - Para obtener información de un artista específico en Spotify, utilizaremos el endpoint "search" de la API.
 - Supongamos que queremos obtener información sobre el artista "Maluma". Podemos usar el siguiente comando cURL como ejemplo:
@@ -33,15 +33,13 @@ curl --request GET \
 
 - Reemplaza el token de acceso después de "Bearer" con el Access Token obtenido del script de Python.
 
-![](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.004.png)
+![Preparar el comando cURL](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.004.png)
 ### **6. Guardar el Access token como parámetro**
-![](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.005.png)
+![Guardar el Access token como parámetro](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.005.png)
 ### **7. Preparar los datos de entrada**
 - Crea una lista de artistas colombianos en una nueva tabla y nómbrala **“Datos de entrada”** donde cada artista esté en una nueva línea.
 
-![Interfaz de usuario gráfica, Aplicación, Tabla
-
-Descripción generada automáticamente](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.006.png)
+![Preparar los datos de entrada](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.006.png)
 ### **8. Crear la función en Power Query**
 - Abre Power Query, crea una nueva consulta y abre el editor avanzado.
 - Copia el siguiente código:
@@ -75,7 +73,7 @@ in
 - Dale un nombre a la función, por ejemplo:
   - Nombre de la consulta: **“Func\_Obtener\_Artista”**
 
-![](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.007.png)
+![Crear la función en Power Query](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.007.png)
 ### **9. Invocar la función de obtención de información del artista**
 - Crear una referencia de **“Datos de entrada”** y nombra esta nueva tabla como **“Spotify Artistas”**
 - En la tabla **“Spotify Artistas”** agrega una nueva columna llamada **"Spotify\_Artista"** utilizando la opción "Agregar columna invocada como función".
@@ -84,13 +82,11 @@ in
 - Eliminar las columnas que no necesitas
 - Asigna a cada columna el tipo de datos que debe tener
 
-![](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.008.png)
+![Invocar la función de obtención de información del artista](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.008.png)
 ### **10. Organizar las consultas en carpetas**
 - Crea grupos de carpetas en Power Query para organizar las consultas. Por ejemplo, crea carpetas para **"Parámetros", "Data de entrada", "Funciones" y "Datos de salida".**
 
-![Aplicación
-
-Descripción generada automáticamente con confianza media](Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.009.png)
+![Organizar las consultas en carpetas](Images/Aspose.Words.6be16035-2bd3-4526-8fba-30f7129950cf.009.png)
 
 ¡Felicitaciones! Has completado una ETL utilizando Power Query para obtener información de artistas de Spotify. Ahora puedes utilizar estos datos para análisis, visualizaciones o cualquier otro propósito necesario.
 
